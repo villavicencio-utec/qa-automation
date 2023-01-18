@@ -9,9 +9,10 @@ class Home(object):
         self.login_icon = driver.find_element(By.XPATH, Locator.login_icon_btn)
         self.shop_icon = driver.find_element(By.CLASS_NAME, Locator.shop_icon_btn)
         self.men_icon = driver.find_element(By.LINK_TEXT, Locator.men_icon)
-        self.woman_icon = driver.find_element(By.LINK_TEXT, Locator.woman_icon)
+        self.woman_icon = driver.find_element(By.XPATH, Locator.woman_icon)
         self.kids_icon = driver.find_element(By.LINK_TEXT, Locator.kids_icon)
         self.shop_now_btn = driver.find_element(By.XPATH, Locator.shop_now_btn)
+
 
     def click_shop_now(self):
         self.shop_now_btn.click()
