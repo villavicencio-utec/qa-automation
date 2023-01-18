@@ -1,6 +1,6 @@
 import unittest
 from selenium import webdriver
-from src.TestBase.Constant import Constant
+from C1.src.TestBase.Constant import Constant
 import urllib3
 
 

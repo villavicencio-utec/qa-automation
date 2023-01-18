@@ -6,6 +6,8 @@ class Generator:
         self.file_name = file_name
         self.data = {}
         self.index = 0
+    # def validate_document(self):
+
 
     def generate_data(self, cant):
         fake = Faker()

@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-from src.PageObject.Locator import Locator
+from C1.src.PageObject.Locator import Locator
 
 class Category(object):
     def __init__(self, driver):

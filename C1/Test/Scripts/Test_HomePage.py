@@ -1,6 +1,6 @@
-from src.TestBase.WebDriverSetup import WebDriverSetup
-from src.PageObject.Pages.HomePage import Home
-from src.TestBase.Constant import Constant
+from C1.src.TestBase.WebDriverSetup import WebDriverSetup
+from C1.src.PageObject.Pages.HomePage import Home
+from C1.src.TestBase.Constant import Constant
 import unittest
 
 

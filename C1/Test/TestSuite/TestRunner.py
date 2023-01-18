@@ -1,7 +1,7 @@
 from unittest import TestLoader, TestSuite, TextTestRunner
-from Test.Scripts.Test_HomePage import EverShopHomePage
-from Test.Scripts.Test_LoginPage import EverShopLoginPage
-from Test.Scripts.Test_CreateOrder import Test_CreateOrder
+from C1.Test.Scripts.Test_HomePage import EverShopHomePage
+from C1.Test.Scripts.Test_LoginPage import EverShopLoginPage
+from C1.Test.Scripts.Test_CreateOrder import Test_CreateOrder
 import testtools as tt
 
 if __name__ == "__main__":

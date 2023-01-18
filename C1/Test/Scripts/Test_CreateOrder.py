@@ -1,17 +1,21 @@
-from src.TestBase.WebDriverSetup import WebDriverSetup
-from src.PageObject.Pages.HomePage import Home
-from src.PageObject.Pages.LoginPage import Login
-from src.PageObject.Pages.CreateAccountPage import CreateAccount
-from src.PageObject.Pages.CategoryPage import Category
-from src.PageObject.Pages.CartPage import Cart
-from src.PageObject.Pages.PopupPage import Popup
-from src.PageObject.Pages.CheckOutPage import CheckOut
-from src.PageObject.Pages.CheckOutDetailPage import CheckOutDetail
+from C1.src.TestBase.WebDriverSetup import WebDriverSetup
+from C1.src.PageObject.Pages.HomePage import Home
+from C1.src.PageObject.Pages.LoginPage import Login
+from C1.src.PageObject.Pages.CreateAccountPage import CreateAccount
+from C1.src.PageObject.Pages.CategoryPage import Category
+from C1.src.PageObject.Pages.CartPage import Cart
+from C1.src.PageObject.Pages.PopupPage import Popup
+from C1.src.PageObject.Pages.CheckOutPage import CheckOut
+from C1.src.PageObject.Pages.CheckOutDetailPage import CheckOutDetail
+from C1.src.PageObject.Pages.BillingPage import Billing
+from C1.src.PageObject.Pages.OrderCompletedPage import OrderCompleted
 
-import unittest
 from time import sleep
-from src.Data.Generator import Generator
-from src.TestBase.Constant import Constant
+from C1.src.TestBase.Constant import Constant
+from C1.src.Data.Generator import Generator
+
+
+
 
 class Test_CreateOrder(WebDriverSetup):
     def test_create_order(self):
@@ -55,7 +59,7 @@ class Test_CreateOrder(WebDriverSetup):
             qty = product_value["qty"]
             size = product_value["size"]
             color = product_value["color"]
-            print(index + 1, qty, size, color)
+
 
             if index == 0:
                 home = Home(driver)
@@ -94,10 +98,20 @@ class Test_CreateOrder(WebDriverSetup):
         sleep(2)
         checkout_detail.select_province(2)
         checkout_detail.setCode(code)
-        sleep(5)
+
         checkout_detail.click_free_shipping()
         checkout_detail.click_continue_btn()
 
+
+        # There is a Chrome popup that does not allow you to continue with the final validation flow
+
+        # billing = Billing(driver)
+        # billing.select_cash()
+        # billing.click_place_order_btn()
+
+        # order = OrderCompleted(driver)
+        # print(order.getContact_email())
+        
         sleep(10)
 
 

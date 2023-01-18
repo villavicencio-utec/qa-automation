@@ -1,10 +1,10 @@
-from src.TestBase.WebDriverSetup import WebDriverSetup
-from src.PageObject.Pages.HomePage import Home
-from src.PageObject.Pages.LoginPage import Login
+from C1.src.TestBase.WebDriverSetup import WebDriverSetup
+from C1.src.PageObject.Pages.HomePage import Home
+from C1.src.PageObject.Pages.LoginPage import Login
 import unittest
 from time import sleep
-from src.Data.Generator import Generator
-from src.TestBase.Constant import Constant
+from C1.src.Data.Generator import Generator
+from C1.src.TestBase.Constant import Constant
 
 class EverShopLoginPage(WebDriverSetup):
 
